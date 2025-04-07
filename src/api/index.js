@@ -1,5 +1,5 @@
 import axios from "axios";
-
+//get post put patch delete
 const baseURL = "https://tools.vescode.net/api/v1";
 
 export const axiosFunction = async (method, endpoint, data) => {
@@ -9,15 +9,16 @@ export const axiosFunction = async (method, endpoint, data) => {
       url: `${baseURL}/${endpoint}`,
       data: data && data,
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       }
     });
 
-    localStorage.setItem("token", response.data.token);
+    console.log(response.data);
 
-    return response.data;
+    return response.data; 
   } catch (err) {
     console.error("API Error:", err.message);
     throw err;
   }
 };
+

@@ -8,7 +8,7 @@ export const basicSchema = Yup.object().shape({
     .matches(new RegExp(passwordRules), {
       message:
         "Password must contain at least eight characters, at least one letter and one number"
-    })
+    }) 
     .required("Required"), 
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password"), null], "Passwords must match")

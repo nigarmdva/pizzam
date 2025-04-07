@@ -5,6 +5,6 @@ import { SignUp } from '../../../Components/SignUp'
   return (
     <div>
       <SignUp/>
-    </div>
+    </div> 
   )
 }
