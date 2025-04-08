@@ -38,7 +38,7 @@ export const SignIn = () => {
         }
       } catch (apiError) {
         console.error("API call failed with error:", apiError);
-        console.error("Error details:", apiError.message);
+        console.error("Error details:", apiError.message);  
         if (apiError.response) {
           console.error("Response status:", apiError.response.status);
           console.error("Response data:", apiError.response.data);
@@ -71,7 +71,7 @@ export const SignIn = () => {
               }`}
             />
             {formik.errors.email && formik.touched.email && (
-              <p className="text-red-500 text-sm text-left pl-12">{formik.errors.email}</p>
+              <p className="text-red-500 text-sm text-left pl-17">{formik.errors.email}</p>
             )}
 
             <input
@@ -87,7 +87,7 @@ export const SignIn = () => {
               }`}
             />
             {formik.errors.password && formik.touched.password && (
-              <p className="text-red-500 text-sm text-left pl-3">{formik.errors.password}</p>
+              <p className="text-red-500 text-sm text-left pl-17">{formik.errors.password}</p>
             )}
           </div>
           {errorMessage && (
@@ -96,9 +96,10 @@ export const SignIn = () => {
           <button
             type="submit"
             disabled={loading || formik.isSubmitting}
-            className="bg-blue-500 text-white p-3 mt-8 rounded-xl w-full sm:w-2/5"
+            className="bg-[#000] text-white p-3 mt-8 rounded-xl w-full sm:w-2/5"
           >
             {loading ? "Signing In..." : "Sign In"}
+            
           </button>
         </div>
       </div>

@@ -4,7 +4,10 @@ const useAuthStore = create((set) => ({
   user: JSON.parse(localStorage.getItem("user")) || null,
   token: localStorage.getItem("token") || null,
 
-  login: (user, token) => {
+  shortUrl: null,
+  qrImage: null,
+
+  login: (user, token) => { 
     set({ user, token });
     localStorage.setItem("user", JSON.stringify(user));
     localStorage.setItem("token", token);
@@ -15,6 +18,13 @@ const useAuthStore = create((set) => ({
     localStorage.removeItem("token");
     window.location.href = "/home";
   },
+    
+}));
+
+
+export const useQrCodes = create((set) => ({
+  qrCodes: [],
+  setQrCodesImg: (qrCodes) => set({ qrCodes }),
 }));
 
 export default useAuthStore;

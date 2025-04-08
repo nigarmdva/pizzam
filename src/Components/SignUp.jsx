@@ -25,7 +25,6 @@ export const SignUp = () => {
           });
 
           const { accessToken, user } = loginResponse;
-
           login(user, accessToken);
 
           window.location.href = "/user";
@@ -55,7 +54,7 @@ export const SignUp = () => {
               }`}
             />
             {errors.email && touched.email && (
-              <p className="text-red-500 text-sm text-left pl-3">
+              <p className="text-red-500 text-sm text-left pl-12">
                 {errors.email}
               </p>
             )}
@@ -81,7 +80,7 @@ export const SignUp = () => {
               }`}
             />
             {errors.password && touched.password && (
-              <p className="text-red-500 text-sm text-left pl-3">
+              <p className="text-red-500 text-sm text-left pl-12">
                 {errors.password}
               </p>
             )}
@@ -94,22 +93,23 @@ export const SignUp = () => {
               placeholder="Confirm Password"
               className={`bg-gray-100 p-3 rounded-xl border-0 outline-0 w-full sm:w-[85%] mt-3 ${
                 errors.confirmPassword && touched.confirmPassword
-                  ? "border-2 border-red-500 text-left pl-3"
+                  ? "border-2 border-red-500 text-left pl-12"
                   : ""
               }`}
             />
             {errors.confirmPassword && touched.confirmPassword && (
-              <p className="text-red-500 text-sm text-left pl-3">
+              <p className="text-red-500 text-sm text-left pl-12">
                 {errors.confirmPassword}
               </p>
             )}
           </div>
           <button
             type="submit"
-            className="bg-[var(--blue)] text-white p-3 mt-8 rounded-xl w-full sm:w-[45%]"
+            className="bg-[#000] text-white p-3 mt-8 rounded-xl w-full sm:w-[45%]"
           >
             Sign Up
           </button>
+          <p className="text-gray-600 text-sm pt-1">Already have an account? <a href="/login" className="underline">Login</a></p>
         </div>
       </div>
     </form>
