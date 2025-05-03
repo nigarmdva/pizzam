@@ -53,8 +53,8 @@ export const SignIn = () => {
     <form onSubmit={formik.handleSubmit}>
       <div className="flex justify-center items-center h-screen bg-gray-100 shadow-2xl shadow-black">
         <div className="bg-white p-8 sm:w-4/5 md:w-3/4 lg:w-1/2 w-full text-center">
-          <h2 className="text-2xl font-bold text-gray-400">Welcome Back!</h2>
-          <p className="text-gray-600 font-bold text-sm pt-1">Login to your account</p>
+          <h2 className="text-2xl font-bold text-gray-400">Xoş Gəldiniz!</h2>
+          <p className="text-gray-600 font-bold text-sm pt-1">Hesabınıza daxil olun</p>
           <div>
             <input
               value={formik.values.email}
@@ -94,11 +94,17 @@ export const SignIn = () => {
           <button
             type="submit"
             disabled={loading || formik.isSubmitting}
-            className="bg-[#000] text-white p-3 mt-8 rounded-xl w-full sm:w-2/5"
+            className="bg-[#000] text-white  cursor-pointer p-3 mt-8 rounded-xl w-full sm:w-2/5"
           >
-            {loading ? "Signing In..." : "Sign In"}
+            {loading ?"Daxil olunur..." : "Daxil ol"}
             
           </button>
+          <p className="text-gray-600 text-sm pt-1">
+            Hesabın yoxdur? 
+            <a href="/register" className="underline">
+               Qeydiyyatdan Keç
+            </a>
+          </p>
         </div>
       </div>
     </form>

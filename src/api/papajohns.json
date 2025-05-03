@@ -1,0 +1,173 @@
+{
+    "pizza": [
+      {
+        "id": "1",
+        "name": "Çiken Parmezan",
+        "img": "chicken_parmesan_item.jpg",
+        "prices": { "xs": 5.5, "sm": 11, "md": 16, "bg": 22 },
+        "des": "Pizza sousu, Çiken Poppersləri, Sarımsaqlı parmesan sousu, Göbələk, İtalyan Ədviyyatları, Mozzarella"
+      },
+      {
+        "id": "2",
+        "name": "Acılı Çiken Ranç",
+        "img": "Spicy-chicken-ranch.png",
+        "prices": { "xs": 5.5, "sm": 11, "md": 16, "bg": 22 },
+        "des": "Ranç Sousu, Qril Toyuğu, Göbələk, Halapeno Bibəri, Pomidor, Mozzarella"
+      },
+      {
+        "id": "3",
+        "name": "Qril Çiken Parmezan",
+        "img": "Grill-Ciken-Parmezan.png",
+        "prices": { "xs": 5.5, "sm": 11, "md": 17, "bg": 21 },
+        "des": "Pizza sousu, Sarımsaqlı Parmezan sousu, Qril Toyuğu, Vetçina, Pomidor, Mozzarella, Halapeno Bibəri"
+      },
+      {
+        "id": "4",
+        "name": "Amerikan Hot",
+        "img": "american-hot.png",
+        "prices": { "xs": 5.5, "sm": 9, "md": 14, "bg": 19 },
+        "des": "Pizza Sousu, Mozzarella, Pepperoni, Halapeno Bibəri"
+      },
+      {
+        "id": "5",
+        "name": "Karnaval",
+        "img": "Karnaval.jpg",
+        "prices": { "sm": 9, "md": 14, "bg": 19 },
+        "des": "Pizza Sousu, Göbələk, Qara Zeytun, Pepperoni, Mozzarella"
+      },
+      {
+        "id": "6",
+        "name": "NY Style Margarita (40 sm)",
+        "img": "New-York-Style-Margarita.jpg",
+        "prices": { "ny": 20 },
+        "des": "Pizza Sousu, Mozzarella, or, Oreqano"
+      },
+      {
+        "id": "7",
+        "name": "NY Style Grill Chicken (40sm)",
+        "img": "New-York-Style-Grill-Chiken.jpg",
+        "prices": { "ny": 26 },
+        "des": "Pizza Sousu, Qril Toyuğu, Mozzarella, Pomidor"
+      },
+      {
+        "id": "8",
+        "name": "NY Style Pepperoni (40 sm)",
+        "img": "New-York-Style-Pepperoni.jpg",
+        "prices": { "ny": 23 },
+        "des": "Pizza Sousu, Pepperoni, Mozzarella"
+      },
+      {
+        "id": "9",
+        "name": "Çiken Ranç",
+        "img": "chicken_ranch.jpg",
+        "prices": { "xs": 5.5, "sm": 11, "md": 16, "bg": 22 },
+        "des": "Ranç sousu, Qril Toyuğu, or, Mozzarella"
+      },
+      {
+        "id": "10",
+        "name": "Cheddar Dabl Burger",
+        "img": "Cheddar-Dabl-Burger.png",
+        "prices": { "sm": 12, "md": 20, "bg": 25 },
+        "des": "1000 ada sousu, Mal əti, or, Mozzarella, Cheddar"
+      },
+      {
+        "id": "11",
+        "name": "Acılı Vegetarian",
+        "img": "vegetarian-acili.png",
+        "prices": { "xs": 5.5, "sm": 9, "md": 13, "bg": 18 },
+        "des": "Pizza Sousu, Halapeno Bibəri, or, Göbələk, Qara Zeytun, Yaşıl Bibər, Mozzarella"
+      },
+      {
+        "id": "12",
+        "name": "Papa Miks",
+        "img": "papamiks-sayt.png",
+        "prices": { "ny": 20 },
+        "des": "Çiken Barbekyu, Hot&Spaysi, Marqarita, Klassik Pepperoni"
+      },
+      {
+        "id": "13",
+        "name": "Çiken Barbekyu",
+        "img": "chicken_barbekyu.jpg",
+        "prices": { "xs": 5.5, "sm": 11, "md": 16, "bg": 22 },
+        "des": "Pizza sousu, Qril Toyuğu, Göbələk, Barbekyu Sousu, Mozzarella"
+      },
+      {
+        "id": "14",
+        "name": "Cheddar Çiken Club",
+        "img": "Cheddar-Ciken-Club.png",
+        "prices": { "sm": 11, "md": 18, "bg": 22 },
+        "des": "Pizza sousu, Qril toyuğu, or, Vetçina, Mozzarella, Cheddar, Ranç sousu"
+      },
+      {
+        "id": "15",
+        "name": "4 Pendir",
+        "img": "4-pendir.png",
+        "prices": { "sm": 11, "md": 16, "bg": 22 },
+        "des": "Pizza sousu, Mozzarella, Feta, Parmezan və Cheddar Pendirləri"
+      },
+      {
+        "id": "16",
+        "name": "Meksika",
+        "img": "meksika.jpg",
+        "prices": { "xs": 5.5, "sm": 9, "md": 15, "bg": 20 },
+        "des": "Pizza sousu, Qril Toyuğu, or, Göbələk, Yaşıl Bibər, Halapeno Bibəri, Mozzarella"
+      },
+      {
+        "id": "17",
+        "name": "Super Papa",
+        "img": "super-papa.jpg",
+        "prices": { "sm": 12, "md": 18, "bg": 23 },
+        "des": "Pizza sousu, Pepperoni, İtalyan Sosisi, Vetçina, Göbələk, Yaşıl Bibər, Qara Zeytun, Mozzarella"
+      },
+      {
+        "id": "18",
+        "name": "Yunan",
+        "img": "yunan.jpg",
+        "prices": { "sm": 8, "md": 13, "bg": 16 },
+        "des": "Pizza sousu, or, Pepperonçini, Qara Zeytun, Feta Pendiri, Oreqano, Mozzarella Pendiri"
+      },
+      {
+        "id": "19",
+        "name": "Çiken Çizburger",
+        "img": "chicken_cheeseburger.jpg",
+        "prices": { "sm": 12, "md": 19, "bg": 23 },
+        "des": "1000 ada sousu, Qril Toyuğu, Turşu Xiyar, or, Mozzarella"
+      },
+      {
+        "id": "20",
+        "name": "Marqarita",
+        "img": "margarita.jpg",
+        "prices": { "xs": 5.5, "sm": 8, "md": 13, "bg": 16 },
+        "des": "Pizza sousu, or, Oreqano, Ekstra Mozzarella"
+      },
+      {
+        "id": "21",
+        "name": "Qarışıq Ət",
+        "img": "qarishiq_et.jpg",
+        "prices": { "sm": 14, "md": 22, "bg": 28 },
+        "des": "Pizza sousu, Pepperoni, İtalyan Sosisi, Mal Əti, Vetçina, Mozzarella"
+      },
+      {
+        "id": "22",
+        "name": "Vegetarian",
+        "img": "vegetarian.jpg",
+        "prices": { "xs": 5.5, "sm": 9, "md": 13, "bg": 18 },
+        "des": "Pizza sousu, or, Göbələk, Yaşıl Bibər, Qara Zeytun, Mozzarella"
+      },
+      {
+        "id": "23",
+        "name": "Spaysi İtalyan",
+        "img": "Spaysi-italyan.png",
+        "prices": { "sm": 13, "md": 21, "bg": 27 },
+        "des": "Pizza sousu, İtalyan sosisi, Pepperoni, Pul bibər, Mozarella"
+      },
+      {
+        "id": "24",
+        "name": "Rastik",
+        "img": "Rustik-320x220-px.png",
+        "prices": { "xs": 5.5, "sm": 10, "md": 15, "bg": 20 },
+        "des": "BBQ sousu, İtalyan sosisi, Pepperoni, Göbələk, Yaşıl bibər, Mozzarella"
+      }
+    ]
+  }
+  
