@@ -2,7 +2,7 @@ import React from "react";
 import { useFormik } from "formik";
 import { basicSchema } from "../schemas/index";
 import { axiosFunction } from "../api/index";
-import useAuthStore from "../store/auth";
+import useAuthStore from "../store/store";
 export const SignUp = () => {
   const { login } = useAuthStore();
 
@@ -18,14 +18,13 @@ export const SignUp = () => {
       onSubmit: async (values) => {
         try {
           await axiosFunction("POST", "auth/register", values);
-
           const loginResponse = await axiosFunction("POST", "auth/login", {
             email: values.email,
             password: values.password,
           });
 
-          const { accessToken, user } = loginResponse;
-          login(user, accessToken);
+          const { accessToken: token, user } = loginResponse;
+          login(user, token);
 
           window.location.href = "/user";
         } catch (error) {
@@ -109,7 +108,12 @@ export const SignUp = () => {
           >
             Sign Up
           </button>
-          <p className="text-gray-600 text-sm pt-1">Already have an account? <a href="/login" className="underline">Login</a></p>
+          <p className="text-gray-600 text-sm pt-1">
+            Already have an account?{" "}
+            <a href="/login" className="underline">
+              Login
+            </a>
+          </p>
         </div>
       </div>
     </form>

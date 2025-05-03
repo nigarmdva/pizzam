@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { axiosFunction } from "../api/index";
 import { signinSchema } from "../schemas/signInSchema";
-import useAuthStore from "../store/auth";
-
+import useAuthStore from "../store/store";
+import { useNavigate } from 'react-router-dom';
 
 
 export const SignIn = () => {
+  const navigate = useNavigate();
+
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -19,21 +21,18 @@ export const SignIn = () => {
     },
     validationSchema: signinSchema,
     onSubmit: async (values, { setSubmitting }) => {
-      console.log("Form submitted with:", values);
       setLoading(true);
       setErrorMessage("");
 
       try {
         const response = await axiosFunction("POST", "auth/login", values);
-        console.log("API Response received:", response);
-
         if (response && response.accessToken) {
-          login(response.user, response.accessToken);
-
-          localStorage.setItem("token", response.accessToken);
-          window.location.href = "/user"; 
+          const user= response.user;
+          const accessToken= response.accessToken;
+          login(user, accessToken);
+          navigate("/user"); 
         } else {
-          console.error("No access token in response:", response);
+
           throw new Error("Invalid response format");
         }
       } catch (apiError) {
@@ -41,7 +40,6 @@ export const SignIn = () => {
         console.error("Error details:", apiError.message);  
         if (apiError.response) {
           console.error("Response status:", apiError.response.status);
-          console.error("Response data:", apiError.response.data);
         }
         throw apiError;
       } finally {

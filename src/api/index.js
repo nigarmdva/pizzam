@@ -1,6 +1,6 @@
 import axios from "axios";
 //get post put patch delete
-const baseURL = "https://tools.vescode.net/api/v1";
+const baseURL = "https://asan-tools.faridasadli.com/api/v1";
 
 export const axiosFunction = async (method, endpoint, data, config = {}) => {
   try {
@@ -8,13 +8,12 @@ export const axiosFunction = async (method, endpoint, data, config = {}) => {
       method,
       url: `${baseURL}/${endpoint}`,
       data: data && data,
+      ...config,
       headers: {
         'Content-Type': 'application/json',
-        ...(config.headers)
+        ...(config.headers || {})
       }
     });
-
-    console.log(response.data);
 
     return response.data; 
   } catch (err) {
