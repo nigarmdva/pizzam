@@ -28,7 +28,7 @@ const Modal = ({ pizza, closeModal }) => {
     closeModal();
     setSelectedSize("");
     setCount(1);
-    setShowAlert(false); 
+    setShowAlert(false);
   };
 
   const handleSizeSelect = (size) => {
@@ -43,8 +43,8 @@ const Modal = ({ pizza, closeModal }) => {
           <button
             onClick={() => {
               closeModal();
-              setSelectedSize(""); // Reset on close
-              setCount(1); // Reset on close
+              setSelectedSize("");
+              setCount(1);
             }}
             className="text-gray-400 cursor-pointer hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center"
           >
@@ -67,40 +67,46 @@ const Modal = ({ pizza, closeModal }) => {
           </button>
         </div>
 
-        <div className="flex flex-row">
-          <div className="p-4 space-y-4">
-            <div>
-              <img src={`../img/${pizza.img}`} alt="" />
+        <div className="flex flex-col sm:flex-row flex-wrap">
+          <div className="flex flex-row w-[90%] justify-between flex-wrap">
+            <div className="p-4 space-y-4">
+              <div>
+                <img src={`../img/${pizza.img}`} alt="" />
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold text-gray-900">
+                  {pizza.name}
+                </h2>
+                <p className="text-base leading-relaxed text-gray-500">
+                  {pizza.des}
+                </p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-2xl font-semibold text-gray-900">
-                {pizza.name}
-              </h2>
-              <p className="text-base leading-relaxed text-gray-500">
-                {pizza.des}
+            <div className="mt-4">
+              <p className="text-[1.2rem] font-[700] mb-2">
+                Ölçü
+                <span className="text-[var(--darkGreen)]">(Mütləq)</span>
               </p>
-            </div>
-          </div>
-          <div className="mt-4">
-            <p className="text-[1.2rem] font-[700] mb-2">
-              Ölçü
-              <span className="text-[var(--darkGreen)]">(Mütləq)</span>
-            </p>
-            <div className="space-y-2">
-              {Object.keys(pizza.prices).map((size) => (
-                <div
-                  key={size}
-                  onClick={() => handleSizeSelect(size)}
-                  className={`flex justify-between items-center cursor-pointer px-4 py-2 rounded-md shadow-sm border ${
-                    selectedSize === size
-                      ? "bg-[var(--darkGreen)] text-white"
-                      : "bg-gray-100 hover:bg-gray-200"
-                  } transition-all duration-200`}
-                >
-                  <p className="font-medium">{size.toUpperCase()}</p>
-                  <span className="font-[700]">{pizza.prices[size]} AZN</span>
-                </div>
-              ))}
+              <div className="flex flex-col gap-[5px]">
+                {Object.keys(pizza.prices).map((size) => (
+                  <div
+                    key={size}
+                    onClick={() => handleSizeSelect(size)}
+                    className={`flex justify-between items-center cursor-pointer 
+                          px-2 py-1 sm:px-3 sm:py-2 
+                          rounded-md shadow-sm border 
+                          text-sm sm:text-base 
+                        ${
+                          selectedSize === size
+                            ? "bg-[var(--darkGreen)] text-white"
+                            : "bg-gray-100 hover:bg-gray-200"
+                        } transition-all duration-200`}
+                  >
+                    <p className="font-medium">{size.toUpperCase()}</p>
+                    <span className="font-[700]">{pizza.prices[size]} AZN</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -109,7 +115,7 @@ const Modal = ({ pizza, closeModal }) => {
           <p className="text-red-600 p-2 text-xl">Zəhmət olmasa ölçü seçin!</p>
         )}
 
-        <div className="flex flex-row items-center justify-end gap-[10px]">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center sm:justify-end gap-4 sm:gap-[10px]">
           <div className="flex items-center justify-between mt-4">
             <div className="text-lg font-semibold">
               <span className="text-[var(--darkGreen)]">

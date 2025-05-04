@@ -63,7 +63,7 @@ export const SignIn = () => {
               id="email"
               name="email"
               type="email"
-              placeholder="Email or Phone Number"
+              placeholder="Email"
               className={`bg-gray-100 p-3 rounded-xl border-0 outline-none w-full sm:w-4/5 mt-3 ${
                 formik.errors.email && formik.touched.email ? "border-2 border-red-500" : ""
               }`}

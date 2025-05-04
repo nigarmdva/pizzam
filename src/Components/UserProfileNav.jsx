@@ -22,7 +22,7 @@ const UserProfileNav = () => {
   return (
     <>
       <div>
-        <div className="flex flex-row justify-between w-full px-10 py-5 items-center  ">
+        <div className="flex flex-col sm:flex-row justify-between w-full px-4 sm:px-10 py-3 sm:py-5 items-start sm:items-center">
           <div>
             <h1>
               Salam, <span className="font-[600]">{user?.fullName}</span>
