@@ -70,9 +70,9 @@ const Modal = ({ pizza, closeModal }) => {
         <div className="flex flex-col sm:flex-row flex-wrap">
           <div className="flex flex-row w-[90%] justify-between flex-wrap">
             <div className="p-4 space-y-4">
-              <div>
+              
                 <img src={`../img/${pizza.img}`} alt="" />
-              </div>
+              
               <div>
                 <h2 className="text-2xl font-semibold text-gray-900">
                   {pizza.name}

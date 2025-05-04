@@ -155,13 +155,6 @@
         "des": "Pizza sousu, or, Göbələk, Yaşıl Bibər, Qara Zeytun, Mozzarella"
       },
       {
-        "id": "23",
-        "name": "Spaysi İtalyan",
-        "img": "Spaysi-italyan.png",
-        "prices": { "sm": 13, "md": 21, "bg": 27 },
-        "des": "Pizza sousu, İtalyan sosisi, Pepperoni, Pul bibər, Mozarella"
-      },
-      {
         "id": "24",
         "name": "Rastik",
         "img": "Rustik-320x220-px.png",
